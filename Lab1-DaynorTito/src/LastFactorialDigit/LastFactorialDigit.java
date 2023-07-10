@@ -1,3 +1,5 @@
+package LastFactorialDigit;
+
 import java.util.Scanner;
 
 public class LastFactorialDigit {

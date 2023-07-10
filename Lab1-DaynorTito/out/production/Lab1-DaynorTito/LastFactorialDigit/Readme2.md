@@ -25,29 +25,26 @@ For each test case only one integer should be printed, which will be the last di
 
 ```
 ---
-title: QuadrantSelection
+title: LastFactorialDigit
 ---
 flowchart LR
 start([start])
-start --> readA[read xCoordinate]
-readA --> readB[read yCoordinate]
-readB --> C{xCoordinate>0 && yCoordinate>0}
-C -->  print1[/ 1 /]
-print1 --> nd([end])
-C --> D{xCoordinate<0 && yCoordinate>0}
-D --> print2[/ 2 /]
-print2 --> nd([end])
-D --> E{xCoordinate<0 && yCoordinate<0}
-E --> print3[/ 3 /]
-print3 --> nd([end])
-E --> F{xCoordinate>0 && yCoordinate<0}
-F --> print4[/ 4 /]
-print4 --> nd([end])
-F --> nd
+start --> readCases[read cases]
+readCases --> A{cases > 0}
+A --> readNumber[read number]
+A --> nd([end])
+readNumber --> fact[factorial = 1 \n j=1 \n cases = cases -1]
+fact --> B{j <= number}
+B --> recalculate[factorial = factorial * j\nj = j + 1]
+recalculate --> B
+B --> printAns[/ factorial % 10/]
+recalculate --> printAns[/ factorial % 10/]
+printAns --> A
+printAns --> nd([end])
 ```
-![imgQuadratSelection.png](imgQuadratSelection.png)
+![imgLastFactorialDigit.png](imgLastFactorialDigit.png)
 
 ## Execution
 
-![img_imgQuadratSelection.png](img_imgQuadratSelection.png)
+![img_imgLastFactorialDigit.png](img_imgLastFactorialDigit.png)
 
