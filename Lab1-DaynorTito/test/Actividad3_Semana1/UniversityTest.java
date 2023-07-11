@@ -1,8 +1,13 @@
 package Actividad3_Semana1;
 
-public class Main {
+import org.junit.jupiter.api.Test;
 
-    public static void main(String[] args) {
+import static org.junit.jupiter.api.Assertions.*;
+
+class UniversityTest {
+
+    @Test
+    public void testUniversityData(){
         University university = new University();
         university.addStudent(new Student("Gery", 1, new String[]{"DataBaseI"}));
         university.addStudent(new Student("Ana", 1, new String[]{"Programming2"}));
@@ -13,10 +18,9 @@ public class Main {
 
         university.getStudents()[0].setGrade(2);
 
-        System.out.println("Students enrolled in DataBaseI");
-        university.filter("DataBaseI");
-        System.out.println("\nAll students");
-        university.showAllStudents();
-
+        assertEquals(2,university.getStudents()[0].getQuantityCourses(),"The quantity courses doesn't match");
+        assertEquals(2,university.getStudents()[1].getQuantityCourses(),"The quantity courses doesn't match");
+        assertEquals(2,university.getStudents()[0].getGrade(),"Student's grade doesn't match");
     }
+
 }

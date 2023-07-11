@@ -11,14 +11,14 @@ public class Student {
         courses = new String[50];
         quantityCourses = 0;
     }
-    public Student(String name, int grade, String[] courses, int quantityCourses) {
+    public Student(String name, int grade, String[] courses) {
         this.name = name;
         this.grade = grade;
         this.courses = new String[50];
         for (int i = 0; i < courses.length; i++) {
             this.courses[i] = courses[i];
+            this.quantityCourses+=1;
         }
-        this.quantityCourses = quantityCourses;
     }
 
     public String getName() {

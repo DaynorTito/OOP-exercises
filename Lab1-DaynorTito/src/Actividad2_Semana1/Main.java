@@ -13,6 +13,7 @@ public class Main {
 
         Triangle triangle = new Triangle(5,9);
         System.out.println(triangle.toString());
+
         EquillateralTriangle equillateralTriangle = new EquillateralTriangle(7,7,7);
         System.out.println(equillateralTriangle.toString());
 
@@ -21,7 +22,5 @@ public class Main {
 
         IsocelesTriangle isocelesTriangle = new IsocelesTriangle(8,8,4);
         System.out.println(isocelesTriangle.toString());
-
-
     }
 }
