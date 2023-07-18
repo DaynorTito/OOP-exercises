@@ -1,4 +1,4 @@
-package university.jala.laboratory2.hospital;
+package university.laboratoryii.hospital;
 
 import org.junit.jupiter.api.Test;
 
